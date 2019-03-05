@@ -19,3 +19,19 @@ class DepthFirstSearch(object):
         for n in node.adjacenciesList:
             if not n.visited:
                 self.dfs(n)
+
+
+# testing
+node1 = Node("A")
+node2 = Node("B")
+node3 = Node("C")
+node4 = Node("D")
+node5 = Node("E")
+
+node1.adjacenciesList.append(node2)
+node1.adjacenciesList.append(node3)
+node2.adjacenciesList.append(node4)
+node4.adjacenciesList.append(node5)
+
+dfs = DepthFirstSearch()
+dfs.dfs(node1)
